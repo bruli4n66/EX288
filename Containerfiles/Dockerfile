@@ -1,4 +1,4 @@
-FROM FROM quay.io/redhattraining/httpd-parent
+FROM quay.io/redhattraining/httpd-parent
 
 RUN echo "Hellocontainer!" > /var/www/index.html
 RUN rm -rf /run/httpd
@@ -6,7 +6,7 @@ RUN mkdir /run/httpd
 
 LABEL version="1.0"
 LABEL description="This is a container file"
-MANTAINER Redhat Training training@redhat.com
+LABEL Redhat Training training@redhat.com
 
 
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
