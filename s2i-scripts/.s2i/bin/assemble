@@ -10,9 +10,19 @@ config_s2i
 
 ######## CUSTOMIZATION STARTS HERE ############
 
+# Copiar los ficheros HTML desde el repositorio al directorio raiz del server web
+cp -r /tmp/src/*.html /var/www/html
+
+# Asegurarse de que la pag predeterminada tenga el texto solicitado
+echo "Amor amor amor sobre todas las cosas" > /var/www/html/index.html
+
+# Crear el archivo info.html con la fecha de construcción.
+echo "<html><body><h1> El Amor está en todas partes </h1><p>Construido en la fecha: $(date +'%Y-%m-%d')</p></body></html>" > /var/www/html
+
+
+
+####### TEST #######
 echo "---> Installing application source"
-
-
 echo "---> Creating info page"
 echo "Page built on $DATE" >> ./info.html
 echo "Proudly served by Apache HTTP Server version $HTTPD_VERSION" >> ./info.html
