@@ -15,7 +15,7 @@ config_s2i
 # Asegurarse de que la pag predeterminada tenga el texto solicitado
 
 touch /var/www/html/index.html
-cp /tmp/src/index.html /opt/app-root/src/index.html
+cp /tmp/src/s2i-scripts/index.html /opt/app-root/src/index.html
 echo "Amor amor amor sobre todas las cosas" > /var/www/html/index.html
 
 # Crear el archivo info.html con la fecha de construcción.
