@@ -13,6 +13,9 @@ config_s2i
 # Copiar los ficheros HTML desde el repositorio al directorio raiz del server web
 
 # Asegurarse de que la pag predeterminada tenga el texto solicitado
+
+touch /var/www/html/index.html
+cp /tmp/src/index.html /opt/app-root/src/index.html
 echo "Amor amor amor sobre todas las cosas" > /var/www/html/index.html
 
 # Crear el archivo info.html con la fecha de construcción.
