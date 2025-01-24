@@ -11,6 +11,7 @@ config_s2i
 ######## CUSTOMIZATION STARTS HERE ############
 
 # Copiar los ficheros HTML desde el repositorio al directorio raiz del server web
+cp -r /opt/app-root/*.html /var/www/html/
 
 # Asegurarse de que la pag predeterminada tenga el texto solicitado
 echo "Amor amor amor sobre todas las cosas" > /var/www/html/index.html
