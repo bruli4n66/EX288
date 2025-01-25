@@ -10,8 +10,17 @@ config_s2i
 
 ######## CUSTOMIZATION STARTS HERE ############
 
+<<<<<<< HEAD
 cp -Rf /tmp/src/*.html ./
 
+=======
+echo "---> Installing application source"
+
+
+echo "---> Creating info page"
+echo "Page built on $DATE" >> ./info.html
+echo "Proudly served by Apache HTTP Server version $HTTPD_VERSION" >> ./info.html
+>>>>>>> origin/main
 
 ######## CUSTOMIZATION ENDS HERE ############
 
